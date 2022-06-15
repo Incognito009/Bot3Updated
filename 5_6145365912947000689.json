@@ -1,0 +1,92 @@
+{
+    "name": "tor-mirrorbot",
+    "description": "A Telegram bot for all your mirror needs",
+    "keywords": [
+        "bot",
+        "telegram",
+        "python"
+    ],
+    "repository": "https://github.com/Incognito009/Bot3Updated",
+    "website": "https://github.com/Incognito009/Bot3Updated",
+    "success_url": "https://t.me/Incognito009",
+    "env": {
+        "DESCRIPTION": {
+            "description": "Setting this to ANYTHING will enable Webhooks when in env mode, value",
+            "required": "True",
+            "value": "anything"
+        },
+        "\"BOT_TOKEN\"": {
+            "description": "{\n        \"description\"",
+            "required": "True",
+            "value": "\"The telegram bot token that you get from @BotFather.\",\n        \"required\""
+        },
+        "\"GDRIVE_FOLDER_ID\"": {
+            "description": "{\n        \"description\"",
+            "required": "True",
+            "value": "\"This is the folder ID of the Google Drive Folder to which you want to upload all the mirrors.\",\n        \"required\""
+        },
+        "},\n      \"TOKEN_PICKLE_URL\"": {
+            "description": "{\n        \"description\"",
+            "required": "False",
+            "value": "\"(Optional) Only if you want to load your token.pickle externally from an index link. Fill this with the direct link of that file.\",\n        \"required\""
+        },
+        "\"HEROKU_APP_NAME\"": {
+            "description": "{\n        \"description\"",
+            "required": "True",
+            "value": "\"Add the Heroku app name here.\",\n        \"required\""
+        },
+        "},\n      \"HEROKU_API_KEY\"": {
+            "description": "{\n        \"description\"",
+            "required": "True",
+            "value": "\"Your Heroku API key, get it from https",
+            "generator": "secret"
+        },
+        "},\n      \"TELEGRAM_HASH\"": {
+            "description": "{\n        \"description\"",
+            "required": "True",
+            "value": "\"This is to authenticate to your Telegram account for downloading Telegram files. You can get this from https",
+            "generator": "secret"
+        },
+        "},\n      \"TELEGRAM_API\"": {
+            "description": "{\n        \"description\"",
+            "required": "True",
+            "value": "\"This is to authenticate to your Telegram account for downloading Telegram files. You can get this from https",
+            "generator": "secret"
+        },
+        "\"IS_TEAM_DRIVE\"": {
+            "description": "{\n        \"description\"",
+            "required": "False",
+            "value": "\"Set to 'True' if GDRIVE_FOLDER_ID is from a Team Drive else False or Leave it empty.\",\n        \"required\""
+        },
+        "},\n      \"AUTO_DELETE_MESSAGE_DURATION\"": {
+            "description": "{\n        \"description\"",
+            "required": "True",
+            "value": "\"Interval of time (in seconds), after which the bot deletes it's message (and command message) which is expected to be viewed instantly. Note",
+            "generator": "secret"
+        },
+        "},\n      \"OWNER_ID\"": {
+            "description": "{\n        \"description\"",
+            "required": "True",
+            "value": "\"The Telegram User ID of the Owner of the Bot. Get it by using /info in @MissRose_bot.\",\n        \"required\""
+        },
+        "\"DOWNLOAD_STATUS_UPDATE_INTERVAL\"": {
+            "description": "{\n        \"description\"",
+            "required": "True",
+            "value": "\"A short interval of time in seconds after which the Mirror progress message is updated. (I recommend to keep it 5 seconds at least).\",\n        \"value\"",
+            "generator": "secret"
+        },
+        "},\n      \"DOWNLOAD_DIR\"": {
+            "description": "{\n        \"description\"",
+            "required": "True",
+            "value": "\"The path to the local folder where the downloads should be downloaded to.\",\n        \"value\"",
+            "generator": "secret"
+        }
+    },
+    "stack": "container",
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
